@@ -1,0 +1,61 @@
+Namespace(batch_size=32, cuda=True, dropout=0.0, clip=-1, epochs=3, ksize=7, levels=8, seq_len=400, log_interval=100, lr=0.004, optim='Adam', nhid=30, seed=1111)
+Producing data...
+/usr/local/lib/python3.13/dist-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Train Epoch:  1 [  3168/ 50000 (6%)]	Learning rate: 0.0040	Loss: 0.339744
+Train Epoch:  1 [  6368/ 50000 (13%)]	Learning rate: 0.0040	Loss: 0.166161
+Train Epoch:  1 [  9568/ 50000 (19%)]	Learning rate: 0.0040	Loss: 0.165545
+Train Epoch:  1 [ 12768/ 50000 (26%)]	Learning rate: 0.0040	Loss: 0.173474
+Train Epoch:  1 [ 15968/ 50000 (32%)]	Learning rate: 0.0040	Loss: 0.169182
+Train Epoch:  1 [ 19168/ 50000 (38%)]	Learning rate: 0.0040	Loss: 0.168962
+Train Epoch:  1 [ 22368/ 50000 (45%)]	Learning rate: 0.0040	Loss: 0.172500
+Train Epoch:  1 [ 25568/ 50000 (51%)]	Learning rate: 0.0040	Loss: 0.170368
+Train Epoch:  1 [ 28768/ 50000 (58%)]	Learning rate: 0.0040	Loss: 0.166602
+Train Epoch:  1 [ 31968/ 50000 (64%)]	Learning rate: 0.0040	Loss: 0.170847
+Train Epoch:  1 [ 35168/ 50000 (70%)]	Learning rate: 0.0040	Loss: 0.170420
+Train Epoch:  1 [ 38368/ 50000 (77%)]	Learning rate: 0.0040	Loss: 0.167727
+Train Epoch:  1 [ 41568/ 50000 (83%)]	Learning rate: 0.0040	Loss: 0.165473
+Train Epoch:  1 [ 44768/ 50000 (90%)]	Learning rate: 0.0040	Loss: 0.169006
+Train Epoch:  1 [ 47968/ 50000 (96%)]	Learning rate: 0.0040	Loss: 0.167056
+
+Test set: Average loss: 0.166145
+
+Train Epoch:  2 [  3168/ 50000 (6%)]	Learning rate: 0.0040	Loss: 0.166965
+Train Epoch:  2 [  6368/ 50000 (13%)]	Learning rate: 0.0040	Loss: 0.159654
+Train Epoch:  2 [  9568/ 50000 (19%)]	Learning rate: 0.0040	Loss: 0.155907
+Train Epoch:  2 [ 12768/ 50000 (26%)]	Learning rate: 0.0040	Loss: 0.157892
+Train Epoch:  2 [ 15968/ 50000 (32%)]	Learning rate: 0.0040	Loss: 0.131670
+Train Epoch:  2 [ 19168/ 50000 (38%)]	Learning rate: 0.0040	Loss: 0.026226
+Train Epoch:  2 [ 22368/ 50000 (45%)]	Learning rate: 0.0040	Loss: 0.005436
+Train Epoch:  2 [ 25568/ 50000 (51%)]	Learning rate: 0.0040	Loss: 0.002891
+Train Epoch:  2 [ 28768/ 50000 (58%)]	Learning rate: 0.0040	Loss: 0.002282
+Train Epoch:  2 [ 31968/ 50000 (64%)]	Learning rate: 0.0040	Loss: 0.002116
+Train Epoch:  2 [ 35168/ 50000 (70%)]	Learning rate: 0.0040	Loss: 0.002087
+Train Epoch:  2 [ 38368/ 50000 (77%)]	Learning rate: 0.0040	Loss: 0.001473
+Train Epoch:  2 [ 41568/ 50000 (83%)]	Learning rate: 0.0040	Loss: 0.001014
+Train Epoch:  2 [ 44768/ 50000 (90%)]	Learning rate: 0.0040	Loss: 0.001185
+Train Epoch:  2 [ 47968/ 50000 (96%)]	Learning rate: 0.0040	Loss: 0.001169
+
+Test set: Average loss: 0.001375
+
+Train Epoch:  3 [  3168/ 50000 (6%)]	Learning rate: 0.0040	Loss: 0.001317
+Train Epoch:  3 [  6368/ 50000 (13%)]	Learning rate: 0.0040	Loss: 0.001234
+Train Epoch:  3 [  9568/ 50000 (19%)]	Learning rate: 0.0040	Loss: 0.000848
+Train Epoch:  3 [ 12768/ 50000 (26%)]	Learning rate: 0.0040	Loss: 0.000435
+Train Epoch:  3 [ 15968/ 50000 (32%)]	Learning rate: 0.0040	Loss: 0.000752
+Train Epoch:  3 [ 19168/ 50000 (38%)]	Learning rate: 0.0040	Loss: 0.001084
+Train Epoch:  3 [ 22368/ 50000 (45%)]	Learning rate: 0.0040	Loss: 0.001182
+Train Epoch:  3 [ 25568/ 50000 (51%)]	Learning rate: 0.0040	Loss: 0.000618
+Train Epoch:  3 [ 28768/ 50000 (58%)]	Learning rate: 0.0040	Loss: 0.000826
+Train Epoch:  3 [ 31968/ 50000 (64%)]	Learning rate: 0.0040	Loss: 0.001181
+Train Epoch:  3 [ 35168/ 50000 (70%)]	Learning rate: 0.0040	Loss: 0.001222
+Train Epoch:  3 [ 38368/ 50000 (77%)]	Learning rate: 0.0040	Loss: 0.000880
+Train Epoch:  3 [ 41568/ 50000 (83%)]	Learning rate: 0.0040	Loss: 0.000532
+Train Epoch:  3 [ 44768/ 50000 (90%)]	Learning rate: 0.0040	Loss: 0.000841
+Train Epoch:  3 [ 47968/ 50000 (96%)]	Learning rate: 0.0040	Loss: 0.000565
+
+Test set: Average loss: 0.002161
+
+
+종료 코드: 0
+전체 실행 시간: 62.5초
