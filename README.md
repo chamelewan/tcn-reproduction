@@ -1,8 +1,8 @@
-# TCN Adding Problem Reproduction
+# TCN Reproduction: Adding Problem · Copy Memory
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chamelewan/tcn-reproduction/blob/main/notebooks/TCN_01_Adding_Problem.ipynb)
 
-Google Colab에서 **locuslab/TCN의 Adding Problem**을 실행하고 로그와 결과를 정리한 재현 기록입니다. 2026-11-10의 T=200·400 초기 실행과 2026-11-24의 T=600 및 순환신경망 기준 모델 실험을 포함합니다. 원 논문 전체 벤치마크 또는 O-RAN 트래픽 예측을 재현한 저장소는 아닙니다.
+Google Colab에서 **locuslab/TCN의 Adding Problem과 Copy Memory**를 실행하고 로그와 결과를 정리한 재현 기록입니다. 2026-11-10의 T=200·400 초기 실행과 2026-11-24의 T=600 및 순환신경망 기준 모델 실험, Copy Memory T=1000 실험을 포함합니다. 원 논문 전체 벤치마크 또는 O-RAN 트래픽 예측을 재현한 저장소는 아닙니다.
 
 ## 원본 연구
 
@@ -97,3 +97,33 @@ python /content/tcn-reproduction/scripts/run_t600_recurrent.py --repo /content/T
 ```
 
 `--model`은 `GRU`, `LSTM`, `RNN` 중 하나입니다. 시드 2222 GRU 실행은 `--seed 2222`를 사용합니다. 원본 TCN 실행 코드는 세션 기록 노트북에 있습니다. `logs/`에는 T=600 TCN의 원본 출력, `results/`에는 순환신경망의 에폭별 JSON과 비교 CSV·PNG를 보관합니다. 학습 가중치 체크포인트는 사용자의 별도 로컬 ZIP 백업에 있으며 이 공개 저장소에는 넣지 않았습니다.
+
+## 2026-11-24: Copy Memory T=1000
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chamelewan/tcn-reproduction/blob/main/notebooks/TCN_02_Copy_Memory.ipynb)
+
+Copy Memory는 입력 앞쪽의 숫자 10개를 기억했다가 길이 T의 빈 구간 뒤에 그대로 다시 출력하는 합성 과제입니다. T=1000이면 전체 길이는 1,020이고, 정답 1,020칸 중 1,010칸이 0입니다. 따라서 **전부 0만 예측해도 전체 정확도는 약 99.02%**이므로 마지막 10칸 정확도를 따로 계산했습니다.
+
+실행 장치는 NVIDIA Tesla T4입니다. 원본 `TCN.copy_memory.copymem_test`를 수정하지 않고 `runpy` 래퍼로 실행했으며, 래퍼에서 NumPy 시드를 추가했습니다. 설정: 시드 1111, 커널 8, 블록 8, 채널 10, dropout 0.05, RMSprop 학습률 0.0005, 배치 32(원본 기본값). GPU 결정적 연산 모드는 강제하지 않았습니다.
+
+| 실행 | 파라미터 | 최종 전체 테스트 손실 | 실행 중 최저 손실 | 최종 전체 정확도 | 최종 마지막 10칸 정확도 | 전체 실행 시간 |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 10에폭 예비 실행 | 12,530 | 0.00439484 | 0.00439484 (10에폭) | 99.9247% | 미측정 | 48.0초 |
+| 50에폭 (처음부터) | 12,530 | **0.00024682** | 0.00008991 (49에폭) | 100.0000% | **100.0000%** | 188.6초 |
+
+- 50에폭 실행은 10에폭 실행을 이어 학습한 것이 아니라 **처음부터 다시 실행**했습니다. 원본 코드가 체크포인트를 저장하지 않기 때문입니다.
+- 마지막 10칸만의 cross-entropy는 0.02515841입니다. 정답 숫자를 모두 맞혀도 확률이 정확히 1은 아니므로 정확도 100%와 양립합니다.
+- 테스트 손실은 에폭마다 흔들렸습니다. 최종값(50에폭)과 실행 중 최저값(49에폭)을 구분하며, 별도 검증셋으로 에폭을 선택하지 않았습니다.
+- 원 논문 Table 1의 Copy Memory T=1000 TCN 손실은 3.5e-5입니다. 이번 최종 손실은 그보다 높습니다. 논문 모델은 약 16K 파라미터로 기재되어 있고 원본 코드 기본값 모델은 12,530개여서 조건이 완전히 같지 않습니다.
+- 원본 `copymem_test.py`의 학습 루프는 `clip_grad_norm_`을 `loss.backward()`보다 **먼저** 호출합니다(119–121행). 따라서 로그의 `clip=1.0`만으로 그래디언트 클리핑이 실제로 적용됐다고 보지 않습니다. 코드는 원본 그대로 실행했습니다.
+- 단일 시드·단일 실행이며 순환신경망 기준 모델과의 Copy Memory 비교는 아직 하지 않았습니다.
+
+![Copy Memory T=1000 50에폭 테스트 손실과 정확도](results/copy_memory_T1000_seed1111_50epochs.png)
+
+그래프는 50에폭 로그에서 `scripts/plot_copy_memory.py`로 생성했습니다. 왼쪽은 전체 테스트 손실(로그 눈금), 오른쪽은 전체 정확도와 '전부 0 예측' 기준선(99.02%)입니다.
+
+```bash
+python scripts/plot_copy_memory.py logs/copy_memory_T1000_seed1111_50epochs_20261124_051148.log results/copy_memory_T1000_seed1111_50epochs.png
+```
+
+`notebooks/TCN_02_Copy_Memory.ipynb`는 실제 Colab 세션에서 내려받은 실행 기록입니다. 게시 시 파일 다운로드 UI의 임시 출력만 제거했고 코드와 학습 출력은 그대로입니다. 노트북 출력의 평가값 60개(10에폭 10개, 50에폭 50개)는 `logs/`의 두 로그와 일치함을 확인했습니다. 게시 후 GPU 재실행은 하지 않았습니다. 50에폭 체크포인트는 사용자의 로컬 ZIP 백업에만 있고 이 저장소에는 넣지 않았습니다.
