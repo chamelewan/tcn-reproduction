@@ -162,7 +162,7 @@ TCN과 같은 데이터(원본 `data_generator`, NumPy 시드 1111, 학습 10,00
 
 ![Copy Memory T=1000 TCN·GRU·LSTM 비교](results/copy_memory_T1000_tcn_gru_lstm_comparison_20261124.png)
 
-실행 스크립트는 `scripts/run_copy_memory_recurrent.py`(Colab에서 실제 실행한 파일과 동일), 로그는 `logs/copy_memory_T1000_{gru,lstm}_seed1111_50epochs_20261124_053815.log`, 에폭별 수치는 `results/*_results.json`입니다. 로그와 JSON의 에폭별 손실이 일치함을 확인했고, ZIP 무결성 검사를 통과했습니다. 체크포인트는 로컬 ZIP에만 보관합니다. 이 실행 셀이 포함된 노트북은 아직 저장소에 반영하지 않았습니다.
+실행 스크립트는 `scripts/run_copy_memory_recurrent.py`(Colab에서 실제 실행한 파일과 동일), 로그는 `logs/copy_memory_T1000_{gru,lstm}_seed1111_50epochs_20261124_053815.log`, 에폭별 수치는 `results/*_results.json`입니다. 로그와 JSON의 에폭별 손실이 일치함을 확인했고, ZIP 무결성 검사를 통과했습니다. 체크포인트는 로컬 ZIP에만 보관합니다. 이 실행 셀은 `notebooks/TCN_02_Copy_Memory.ipynb`의 7번째 셀이며, 셀 안에서 만든 스크립트가 저장소의 `scripts/run_copy_memory_recurrent.py`와 같음을 확인했습니다.
 
 ```bash
 python /content/tcn-reproduction/scripts/run_copy_memory_recurrent.py --repo /content/TCN --model GRU --hidden 61 --out_prefix /content/copy_memory_T1000_gru
@@ -186,4 +186,4 @@ TCN은 **논문 부록 Table 2의 T=500 설정**(커널 6, 블록 9, 채널 10, 
 
 ![Copy Memory T=500 TCN·GRU·LSTM 비교](results/copy_memory_T500_tcn_gru_lstm_comparison_20261124.png)
 
-TCN 단독 학습 곡선은 `results/copy_memory_T500_tcn_k6_l9_seed1111_50epochs.png`에 있습니다. ZIP 무결성 검사를 통과했고, GRU·LSTM 로그와 JSON의 에폭별 손실이 일치함을 확인했습니다. 체크포인트는 로컬 ZIP에만 보관합니다. `scripts/plot_copy_memory_baselines.py`의 제목이 로그의 T·시드를 읽도록 수정했고, T=1000 비교 그래프를 다시 그려 기존 파일과 같음을 확인했습니다.
+TCN 단독 학습 곡선은 `results/copy_memory_T500_tcn_k6_l9_seed1111_50epochs.png`에 있습니다. 실행 셀은 노트북의 마지막(8번째) 셀입니다. 노트북 출력의 평가값 150개가 세 로그와 일치하고, ZIP 무결성 검사를 통과했으며, GRU·LSTM 로그와 JSON의 에폭별 손실이 일치함을 확인했습니다. 체크포인트는 로컬 ZIP에만 보관합니다. `scripts/plot_copy_memory_baselines.py`의 제목이 로그의 T·시드를 읽도록 수정했고, T=1000 비교 그래프를 다시 그려 기존 파일과 같음을 확인했습니다.
