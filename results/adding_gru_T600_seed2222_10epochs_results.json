@@ -1,0 +1,55 @@
+{
+  "task": "Adding Problem",
+  "model": "single-layer PyTorch GRU with linear output",
+  "sequence_length": 600,
+  "seed": 2222,
+  "hidden_size": 150,
+  "parameter_count": 69451,
+  "train_samples": 50000,
+  "test_samples": 1000,
+  "batch_size": 32,
+  "optimizer": "Adam",
+  "learning_rate": 0.004,
+  "test_mse_by_epoch": [
+    {
+      "epoch": 1,
+      "test_mse": 0.000365693646017462
+    },
+    {
+      "epoch": 2,
+      "test_mse": 0.00010589641897240654
+    },
+    {
+      "epoch": 3,
+      "test_mse": 0.00015040421567391604
+    },
+    {
+      "epoch": 4,
+      "test_mse": 8.158341370290145e-05
+    },
+    {
+      "epoch": 5,
+      "test_mse": 4.810171594726853e-05
+    },
+    {
+      "epoch": 6,
+      "test_mse": 3.648674828582443e-05
+    },
+    {
+      "epoch": 7,
+      "test_mse": 5.537045581149869e-05
+    },
+    {
+      "epoch": 8,
+      "test_mse": 2.4343466066056862e-05
+    },
+    {
+      "epoch": 9,
+      "test_mse": 2.0528017557808198e-05
+    },
+    {
+      "epoch": 10,
+      "test_mse": 2.572239827713929e-05
+    }
+  ]
+}

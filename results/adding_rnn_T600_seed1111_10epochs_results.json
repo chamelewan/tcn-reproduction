@@ -1,0 +1,55 @@
+{
+  "task": "Adding Problem",
+  "model": "single-layer PyTorch RNN with linear output",
+  "sequence_length": 600,
+  "seed": 1111,
+  "hidden_size": 262,
+  "parameter_count": 69955,
+  "train_samples": 50000,
+  "test_samples": 1000,
+  "batch_size": 32,
+  "optimizer": "Adam",
+  "learning_rate": 0.004,
+  "test_mse_by_epoch": [
+    {
+      "epoch": 1,
+      "test_mse": 0.18418242037296295
+    },
+    {
+      "epoch": 2,
+      "test_mse": 0.18546074628829956
+    },
+    {
+      "epoch": 3,
+      "test_mse": 0.18291208148002625
+    },
+    {
+      "epoch": 4,
+      "test_mse": 0.18188157677650452
+    },
+    {
+      "epoch": 5,
+      "test_mse": 0.18617407977581024
+    },
+    {
+      "epoch": 6,
+      "test_mse": 0.1897650510072708
+    },
+    {
+      "epoch": 7,
+      "test_mse": 0.18982276320457458
+    },
+    {
+      "epoch": 8,
+      "test_mse": 0.1887357234954834
+    },
+    {
+      "epoch": 9,
+      "test_mse": 0.18966549634933472
+    },
+    {
+      "epoch": 10,
+      "test_mse": 0.18924210965633392
+    }
+  ]
+}

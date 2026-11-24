@@ -2,7 +2,7 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chamelewan/tcn-reproduction/blob/main/notebooks/TCN_01_Adding_Problem.ipynb)
 
-Google Colab에서 **locuslab/TCN의 Adding Problem 두 조건**을 실행하고 로그와 결과를 정리한 재현 기록입니다. 각 조건은 단일 시드로 한 번 실행했습니다. 원 논문 전체 벤치마크 또는 O-RAN 트래픽 예측을 재현한 저장소는 아닙니다.
+Google Colab에서 **locuslab/TCN의 Adding Problem**을 실행하고 로그와 결과를 정리한 재현 기록입니다. 2026-11-10의 T=200·400 초기 실행과 2026-11-24의 T=600 및 순환신경망 기준 모델 실험을 포함합니다. 원 논문 전체 벤치마크 또는 O-RAN 트래픽 예측을 재현한 저장소는 아닙니다.
 
 ## 원본 연구
 
@@ -15,7 +15,7 @@ Google Colab에서 **locuslab/TCN의 Adding Problem 두 조건**을 실행하고
 
 1. 위 **Open in Colab** 버튼으로 노트북을 엽니다. 수정하려면 본인 Drive에 사본을 저장합니다.
 2. **런타임 → 런타임 유형 변경 → NVIDIA GPU**를 선택합니다. 기록된 실행 장치는 L4입니다.
-3. 코드 셀을 위에서 아래로 실행합니다. 맥에서는 셀 왼쪽 ▶ 또는 **Shift + Return**을 사용합니다.
+3. `TCN_01_Adding_Problem.ipynb`의 코드 셀을 위에서 아래로 실행합니다. 맥에서는 셀 왼쪽 ▶ 또는 **Shift + Return**을 사용합니다.
 4. 환경 확인 → 원본 커밋 체크아웃 → GPU 순전파 → T=200 학습 → T=400 학습 → 로그 ZIP → 비교 그래프 순서입니다.
 5. 로그·그래프는 `/content/TCN/reproduction_logs/`에 생성됩니다. 임시 파일이므로 다운로드 셀로 보관합니다.
 
@@ -63,3 +63,37 @@ results/adding_T200_T400_comparison.png
 ```
 
 현재 결과를 출발점으로 논문 설정 대조, 추가 길이 조건, 반복 실행 등을 이어갈 예정입니다.
+
+## 2026-11-24: T=600 및 기준 모델 비교
+
+추가 실험은 NVIDIA T4에서 진행했습니다. 원본 TCN 커밋은 위와 같으며, T=600 모델은 논문 부록의 커널 8·블록 8·채널 24 설정을 사용했습니다. 모델 파라미터는 70,369개입니다. 학습 50,000개·테스트 1,000개, 배치 32, Adam 학습률 0.004, dropout 0, 손실 함수 MSE입니다. NumPy와 PyTorch에 동일한 시드를 설정했습니다. 원본 TCN 스크립트의 `--cuda` 옵션은 역으로 CPU를 선택하므로 GPU 실행 시 전달하지 않습니다.
+
+GRU·LSTM·RNN은 **논문 저자의 공개 구현이 아닌 직접 구성한 단일 계층 기준 모델**입니다. 원본 `data_generator`를 사용했고, 모델 크기를 약 7만 파라미터로 맞췄습니다. 같은 시드의 모델은 동일한 난수 생성 순서로 만든 학습·테스트 데이터를 사용하도록 했습니다. GPU 결정적 연산 모드는 강제하지 않았으므로 같은 시드로 재실행해도 결과가 정확히 일치하지 않을 수 있습니다.
+
+| 시드 | 모델 | 파라미터 | 3에폭 테스트 MSE | 10에폭 테스트 MSE |
+| --- | --- | ---: | ---: | ---: |
+| 1111 | TCN | 70,369 | 0.000671 | 0.000659 |
+| 1111 | GRU | 69,451 | 0.000115 | 0.000027 |
+| 1111 | LSTM | 69,811 | 0.181890 | 0.000403 |
+| 1111 | RNN | 69,955 | 0.182912 | 0.189242 |
+| 2222 | TCN | 70,369 | 0.175058 | 0.000102 |
+| 2222 | GRU | 69,451 | 0.000150 | 0.000026 |
+
+표의 TCN 3에폭 값은 **각 10에폭 실행의 세 번째 평가값**입니다. 별도로 수행한 3에폭 실행의 최종값은 시드 1111에서 0.001388, 시드 2222에서 0.175206이었습니다. 최종값과 실행 중 최저값을 구분합니다. 예를 들어 시드 1111의 TCN은 9에폭 0.000158이었으나 10에폭 최종값은 0.000659입니다. 별도 검증셋으로 에폭을 선택하지 않았고 같은 테스트셋을 매 에폭 평가했습니다.
+
+시드 1111의 LSTM은 8에폭, 시드 2222의 TCN은 7에폭부터 오차가 크게 감소했습니다. RNN은 10에폭 후에도 거의 일정한 값만 예측했습니다. 두 시드의 TCN·GRU 비교에서 GRU가 더 낮은 최종 오차를 냈습니다. 이 결과는 이 합성 과제·직접 구성한 기준 모델·제한된 시드와 학습 설정에만 해당합니다. 논문의 순환신경망 결과나 O-RAN 트래픽 예측의 재현으로 해석하지 않습니다.
+
+![T=600 네 모델과 두 시드의 학습 곡선](results/adding_T600_10epoch_comparison_20261124.png)
+
+`notebooks/TCN_20261124_session_archive.ipynb`는 **실제 Colab 세션에서 내려받은 실행 기록**입니다. 11월 10일 셀과 11월 24일 셀이 이어 붙어 있으며, 중간에 같은 저장소를 다시 복제하는 셀이 있으므로 처음부터 **모두 실행**하지 마세요. 저장된 출력은 실제 실행 결과지만, GitHub에 올린 뒤 다시 GPU로 전체 실행하지는 않았습니다.
+
+순환신경망 기준 모델을 새 런타임에서 실행할 때는 원본 저장소를 해당 커밋으로 복제한 뒤 이 저장소의 스크립트를 사용합니다. 이 스크립트는 세션의 학습 코드를 정리한 것이며 게시 후 GPU 재실행은 아직 하지 않았습니다.
+
+```bash
+git clone https://github.com/locuslab/TCN.git /content/TCN
+git -C /content/TCN checkout 2f8c2b817050206397458dfd1f5a25ce8a32fe65
+git clone https://github.com/chamelewan/tcn-reproduction.git /content/tcn-reproduction
+python /content/tcn-reproduction/scripts/run_t600_recurrent.py --repo /content/TCN --model GRU --seed 1111 --epochs 10
+```
+
+`--model`은 `GRU`, `LSTM`, `RNN` 중 하나입니다. 시드 2222 GRU 실행은 `--seed 2222`를 사용합니다. 원본 TCN 실행 코드는 세션 기록 노트북에 있습니다. `logs/`에는 T=600 TCN의 원본 출력, `results/`에는 순환신경망의 에폭별 JSON과 비교 CSV·PNG를 보관합니다. 학습 가중치 체크포인트는 사용자의 별도 로컬 ZIP 백업에 있으며 이 공개 저장소에는 넣지 않았습니다.

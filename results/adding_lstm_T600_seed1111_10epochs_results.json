@@ -1,0 +1,55 @@
+{
+  "task": "Adding Problem",
+  "model": "single-layer PyTorch LSTM with linear output",
+  "sequence_length": 600,
+  "seed": 1111,
+  "hidden_size": 130,
+  "parameter_count": 69811,
+  "train_samples": 50000,
+  "test_samples": 1000,
+  "batch_size": 32,
+  "optimizer": "Adam",
+  "learning_rate": 0.004,
+  "test_mse_by_epoch": [
+    {
+      "epoch": 1,
+      "test_mse": 0.18179546296596527
+    },
+    {
+      "epoch": 2,
+      "test_mse": 0.18191483616828918
+    },
+    {
+      "epoch": 3,
+      "test_mse": 0.1818898618221283
+    },
+    {
+      "epoch": 4,
+      "test_mse": 0.18184903264045715
+    },
+    {
+      "epoch": 5,
+      "test_mse": 0.18184062838554382
+    },
+    {
+      "epoch": 6,
+      "test_mse": 0.18180277943611145
+    },
+    {
+      "epoch": 7,
+      "test_mse": 0.18129463493824005
+    },
+    {
+      "epoch": 8,
+      "test_mse": 0.001386389834806323
+    },
+    {
+      "epoch": 9,
+      "test_mse": 0.0007265856838785112
+    },
+    {
+      "epoch": 10,
+      "test_mse": 0.0004026450333185494
+    }
+  ]
+}
