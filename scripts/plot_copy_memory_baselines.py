@@ -53,7 +53,8 @@ def main() -> None:
     axes[1].grid(True, alpha=0.25)
     axes[1].legend(loc="center right", fontsize=9)
 
-    fig.suptitle("Copy Memory T=1000, seed 1111, 50 epochs: TCN vs self-built recurrent baselines", fontsize=13)
+    seed = re.search(r"seed=(\d+)", text).group(1)
+    fig.suptitle(f"Copy Memory T={blank_len}, seed {seed}, {n_epochs} epochs: TCN vs self-built recurrent baselines", fontsize=13)
     fig.tight_layout()
     args.output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.output, dpi=200, bbox_inches="tight")

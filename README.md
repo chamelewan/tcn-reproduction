@@ -158,7 +158,7 @@ TCN과 같은 데이터(원본 `data_generator`, NumPy 시드 1111, 학습 10,00
 - **TCN 실행과 다른 점:** 순환신경망에는 그래디언트 클리핑 1.0을 `backward()` 뒤에 정상 적용했습니다(TCN 원본은 호출 순서 때문에 실제 적용되지 않음). 순환신경망에 유리한 차이입니다.
 - **한계:** 논문은 순환신경망의 옵티마이저·학습률·클리핑·드롭아웃·forget gate bias를 격자 탐색(grid search)했지만, 우리는 TCN 기본값 한 가지 설정만 사용했습니다. 단일 시드이며, 다른 학습률·초기화·더 긴 학습에서 순환신경망이 학습될 가능성을 배제하지 않습니다.
 - TCN의 마지막 10칸 정확도는 50에폭 종료 후에만 측정했으므로 그래프에 점 하나로 표시했습니다. GRU·LSTM은 매 에폭 측정했습니다.
-- 논문 5.4절은 모델 크기를 약 10K라고 쓰고 Table 1은 약 16K로 기재해, 논문 안에서도 크기 표기가 다릅니다. 논문 Figure 4는 T=500·1000을 보여 주며, T=500은 아직 실행하지 않았습니다.
+- 논문 5.4절은 모델 크기를 약 10K라고 쓰고 Table 1은 약 16K로 기재해, 논문 안에서도 크기 표기가 다릅니다. 논문 Figure 4는 T=500·1000을 보여 주며, T=500 결과는 아래 섹션에 있습니다.
 
 ![Copy Memory T=1000 TCN·GRU·LSTM 비교](results/copy_memory_T1000_tcn_gru_lstm_comparison_20261124.png)
 
@@ -168,3 +168,22 @@ TCN과 같은 데이터(원본 `data_generator`, NumPy 시드 1111, 학습 10,00
 python /content/tcn-reproduction/scripts/run_copy_memory_recurrent.py --repo /content/TCN --model GRU --hidden 61 --out_prefix /content/copy_memory_T1000_gru
 python scripts/plot_copy_memory_baselines.py --tcn-log logs/copy_memory_T1000_seed1111_50epochs_20261124_051148.log --baseline GRU results/copy_memory_T1000_gru_seed1111_50epochs_20261124_053815_results.json --baseline LSTM results/copy_memory_T1000_lstm_seed1111_50epochs_20261124_053815_results.json results/copy_memory_T1000_tcn_gru_lstm_comparison_20261124.png
 ```
+
+### T=500: TCN(논문 부록 설정)·GRU·LSTM
+
+TCN은 **논문 부록 Table 2의 T=500 설정**(커널 6, 블록 9, 채널 10, dropout 0.05, RMSprop 5e-4)으로 원본 코드를 실행했습니다. 파라미터는 10,750개이고 수용 영역은 1 + 2×5×(2⁹−1) = 5,111칸입니다. T=1000·2000의 TCN(커널 8, 블록 8)과 모델 구조가 다릅니다. GRU·LSTM은 T=1000과 같은 직접 구성 모델·설정에서 길이만 500으로 바꿨습니다(`scripts/run_copy_memory_recurrent.py --blank_len 500`, 저장소 커밋 `a141aea`에서 실행). 전체 길이는 520이며, 전부 0 예측 정확도는 약 98.08%, 기억 없는 찍기의 전체 손실은 10·ln 8 / 520 ≈ 0.039989입니다.
+
+| 모델 | 파라미터 | 50에폭 전체 테스트 손실 | 실행 중 최저 손실 | 전체 정확도 | 마지막 10칸 정확도 | 마지막 10칸 cross-entropy | 실행 시간 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| TCN (k6·l9) | 10,750 | 0.00013040 | 0.00007909 (46에폭) | 100.0000% | **100.0000%** | 0.00676596 | 191.1초(전체 프로세스) |
+| GRU (직접 구성) | 12,332 | 0.03950760 | 0.03950760 (50에폭) | 98.3675% | **15.1100%** | 2.05433607 | 39.8초(학습) |
+| LSTM (직접 구성) | 12,412 | 0.04001097 | 0.04001097 (50에폭) | 98.3192% | **12.6000%** | 2.08057022 | 41.9초(학습) |
+
+- TCN은 23에폭에 전체 정확도 100%에 처음 도달했고, 이후 27에폭(99.8231%) 등에서 일시적으로 떨어졌다가 50에폭에 마지막 10칸을 모두 맞혔습니다.
+- LSTM은 50에폭 내내 기억 없는 찍기 수준(마지막 10칸 12.6%)에 머물렀습니다.
+- GRU는 48에폭까지 찍기 수준(12.21%)이었고, **49·50에폭에 마지막 10칸 정확도가 15.22%·15.11%로 약간 올랐습니다.** 학습이 시작되는 신호일 수도 있지만 50에폭에서 끝났으므로 이후 추세는 알 수 없습니다. 더 길게 학습했을 때 GRU가 이 과제를 풀지 여부는 실행하지 않았으므로 판단하지 않습니다.
+- 논문 5.4절은 같은 크기의 LSTM·GRU가 T가 커질수록 무작위 추측으로 수렴한다고 서술합니다. 이번 T=500·1000 결과는 그 경향과 맞지만, 순환신경망의 하이퍼파라미터 탐색 없이 한 가지 설정·단일 시드로 얻은 결과입니다.
+
+![Copy Memory T=500 TCN·GRU·LSTM 비교](results/copy_memory_T500_tcn_gru_lstm_comparison_20261124.png)
+
+TCN 단독 학습 곡선은 `results/copy_memory_T500_tcn_k6_l9_seed1111_50epochs.png`에 있습니다. ZIP 무결성 검사를 통과했고, GRU·LSTM 로그와 JSON의 에폭별 손실이 일치함을 확인했습니다. 체크포인트는 로컬 ZIP에만 보관합니다. `scripts/plot_copy_memory_baselines.py`의 제목이 로그의 T·시드를 읽도록 수정했고, T=1000 비교 그래프를 다시 그려 기존 파일과 같음을 확인했습니다.
