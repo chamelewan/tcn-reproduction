@@ -27,7 +27,7 @@ def main() -> None:
     seq_len = int(re.search(r"seq_len=(\d+)", text).group(1))
     memoryless = seq_len * math.log(8) / (blank_len + 2 * seq_len)
 
-    colors = {"TCN": "#1166aa", "GRU": "#c46500", "LSTM": "#2e8b57", "RNN": "#888888"}
+    colors = {"TCN": "#1166aa", "GRU": "#c46500", "LSTM": "#2e8b57", "RNN": "#8e44ad"}
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
     axes[0].plot(range(1, len(tcn_losses) + 1), tcn_losses, color=colors["TCN"], lw=2,
                  label=f"TCN ({tcn_params:,} params)")
