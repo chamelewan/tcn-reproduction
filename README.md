@@ -127,7 +127,7 @@ Copy Memory는 입력 앞쪽의 숫자 10개를 기억했다가 길이 T의 빈 
 python scripts/plot_copy_memory.py logs/copy_memory_T1000_seed1111_50epochs_20261124_051148.log results/copy_memory_T1000_seed1111_50epochs.png
 ```
 
-`notebooks/TCN_02_Copy_Memory.ipynb`는 실제 Colab 세션에서 내려받은 실행 기록입니다. 게시 시 파일 다운로드 UI의 임시 출력만 제거했고 코드와 학습 출력은 그대로입니다. 노트북 출력의 평가값 60개(10에폭 10개, 50에폭 50개)는 `logs/`의 두 로그와 일치함을 확인했습니다. 게시 후 GPU 재실행은 하지 않았습니다. 50에폭 체크포인트는 사용자의 로컬 ZIP 백업에만 있고 이 저장소에는 넣지 않았습니다.
+`notebooks/TCN_02_Copy_Memory.ipynb`는 실제 Colab 세션에서 내려받은 실행 기록입니다. 게시 시 파일 다운로드 UI의 임시 출력만 제거했고 코드와 학습 출력은 그대로입니다. T=1000 노트북 출력의 평가값 60개(10에폭 10개, 50에폭 50개)는 `logs/`의 두 로그와 일치함을 확인했습니다. 게시 후 GPU 재실행은 하지 않았습니다. 50에폭 체크포인트는 사용자의 로컬 ZIP 백업에만 있고 이 저장소에는 넣지 않았습니다.
 
 ### T=2000 추가 실행
 
@@ -141,4 +141,4 @@ T=1000과 같은 모델·학습 설정(시드 1111, 50에폭, 파라미터 12,53
 
 ![Copy Memory T=2000 50에폭 테스트 손실과 정확도](results/copy_memory_T2000_seed1111_50epochs.png)
 
-T=2000 실행 셀은 위 노트북을 내려받은 **뒤** 같은 Colab 세션에서 추가 실행했으므로 `notebooks/TCN_02_Copy_Memory.ipynb`에는 없습니다. 실행 근거는 `logs/copy_memory_T2000_seed1111_50epochs_20261124_052742.log`이며, 로그·체크포인트 ZIP의 무결성 검사를 통과했습니다. `scripts/plot_copy_memory.py`는 로그의 `blank_len`에서 T와 전부 0 기준선을 계산하도록 수정했고, 수정 후 T=1000 그래프를 다시 그려 기존 그래프와 같음을 확인했습니다.
+T=2000 실행 셀은 `notebooks/TCN_02_Copy_Memory.ipynb`의 마지막 셀입니다. 같은 Colab 세션에서 다시 내려받은 노트북으로 교체했으며, 이 셀 출력의 평가값 50개와 최종 지표가 로그와 일치함을 확인했습니다. 실행 근거는 `logs/copy_memory_T2000_seed1111_50epochs_20261124_052742.log`이며, 로그·체크포인트 ZIP의 무결성 검사를 통과했습니다. `scripts/plot_copy_memory.py`는 로그의 `blank_len`에서 T와 전부 0 기준선을 계산하도록 수정했고, 수정 후 T=1000 그래프를 다시 그려 기존 그래프와 같음을 확인했습니다.
