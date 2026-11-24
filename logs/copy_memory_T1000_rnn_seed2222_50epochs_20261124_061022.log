@@ -1,0 +1,157 @@
+Namespace(repo='/content/TCN', model='RNN', hidden=105, blank_len=1000, seq_len=10, epochs=50, batch_size=32, lr=0.0005, clip=1.0, seed=2222, out_prefix='/content/TCN/reproduction_logs/copy_memory_T1000_rnn_seed2222_50epochs_20261124_061022')
+MODEL_PARAMETERS: 12400
+
+Test set: Average loss: 0.02339706  |  Accuracy: 99.1338
+| Epoch   1 | last10 accuracy 11.6500 | last10 CE 2.17453814 | 1.5s
+
+Test set: Average loss: 0.03913263  |  Accuracy: 99.1366
+| Epoch   2 | last10 accuracy 12.3600 | last10 CE 2.11711431 | 1.1s
+
+Test set: Average loss: 0.02060118  |  Accuracy: 99.1420
+| Epoch   3 | last10 accuracy 12.4800 | last10 CE 2.08897042 | 1.1s
+
+Test set: Average loss: 0.02046889  |  Accuracy: 99.1426
+| Epoch   4 | last10 accuracy 12.5400 | last10 CE 2.08447385 | 1.1s
+
+Test set: Average loss: 0.02043212  |  Accuracy: 99.1426
+| Epoch   5 | last10 accuracy 12.5400 | last10 CE 2.08328414 | 1.1s
+
+Test set: Average loss: 0.02042862  |  Accuracy: 99.1426
+| Epoch   6 | last10 accuracy 12.5400 | last10 CE 2.08308721 | 1.1s
+
+Test set: Average loss: 0.02042579  |  Accuracy: 99.1426
+| Epoch   7 | last10 accuracy 12.5400 | last10 CE 2.08304214 | 1.1s
+
+Test set: Average loss: 0.02042387  |  Accuracy: 99.1426
+| Epoch   8 | last10 accuracy 12.5400 | last10 CE 2.08306861 | 1.1s
+
+Test set: Average loss: 0.02041816  |  Accuracy: 99.1426
+| Epoch   9 | last10 accuracy 12.5400 | last10 CE 2.08248091 | 1.1s
+
+Test set: Average loss: 0.02041979  |  Accuracy: 99.1426
+| Epoch  10 | last10 accuracy 12.5400 | last10 CE 2.08270049 | 1.1s
+
+Test set: Average loss: 0.02042229  |  Accuracy: 99.1426
+| Epoch  11 | last10 accuracy 12.5400 | last10 CE 2.08297801 | 1.1s
+
+Test set: Average loss: 0.02042185  |  Accuracy: 99.1426
+| Epoch  12 | last10 accuracy 12.5400 | last10 CE 2.08298326 | 1.1s
+
+Test set: Average loss: 0.02041645  |  Accuracy: 99.1426
+| Epoch  13 | last10 accuracy 12.5400 | last10 CE 2.08244181 | 1.1s
+
+Test set: Average loss: 0.02041753  |  Accuracy: 99.1426
+| Epoch  14 | last10 accuracy 12.5400 | last10 CE 2.08256006 | 1.1s
+
+Test set: Average loss: 0.02041960  |  Accuracy: 99.1426
+| Epoch  15 | last10 accuracy 12.5400 | last10 CE 2.08277726 | 1.1s
+
+Test set: Average loss: 0.02042061  |  Accuracy: 99.1426
+| Epoch  16 | last10 accuracy 12.5400 | last10 CE 2.08287954 | 1.1s
+
+Test set: Average loss: 0.02042041  |  Accuracy: 99.1437
+| Epoch  17 | last10 accuracy 12.6600 | last10 CE 2.08287215 | 1.1s
+
+Test set: Average loss: 0.02041956  |  Accuracy: 99.1426
+| Epoch  18 | last10 accuracy 12.5400 | last10 CE 2.08278799 | 1.1s
+
+Test set: Average loss: 0.02041898  |  Accuracy: 99.1426
+| Epoch  19 | last10 accuracy 12.5400 | last10 CE 2.08273053 | 1.1s
+
+Test set: Average loss: 0.02041877  |  Accuracy: 99.1437
+| Epoch  20 | last10 accuracy 12.6600 | last10 CE 2.08271170 | 1.1s
+
+Test set: Average loss: 0.02041751  |  Accuracy: 99.1426
+| Epoch  21 | last10 accuracy 12.5400 | last10 CE 2.08256650 | 1.1s
+
+Test set: Average loss: 0.02041807  |  Accuracy: 99.1426
+| Epoch  22 | last10 accuracy 12.5400 | last10 CE 2.08263469 | 1.1s
+
+Test set: Average loss: 0.02041844  |  Accuracy: 99.1426
+| Epoch  23 | last10 accuracy 12.5400 | last10 CE 2.08267212 | 1.1s
+
+Test set: Average loss: 0.02041870  |  Accuracy: 99.1426
+| Epoch  24 | last10 accuracy 12.5400 | last10 CE 2.08270073 | 1.1s
+
+Test set: Average loss: 0.02041858  |  Accuracy: 99.1426
+| Epoch  25 | last10 accuracy 12.5400 | last10 CE 2.08269191 | 1.1s
+
+Test set: Average loss: 0.02040756  |  Accuracy: 99.1431
+| Epoch  26 | last10 accuracy 12.6300 | last10 CE 2.08014536 | 1.1s
+
+Test set: Average loss: 0.02041230  |  Accuracy: 99.1426
+| Epoch  27 | last10 accuracy 12.5400 | last10 CE 2.08205342 | 1.1s
+
+Test set: Average loss: 0.02041695  |  Accuracy: 99.1426
+| Epoch  28 | last10 accuracy 12.5400 | last10 CE 2.08252740 | 1.1s
+
+Test set: Average loss: 0.02041936  |  Accuracy: 99.1426
+| Epoch  29 | last10 accuracy 12.5400 | last10 CE 2.08277392 | 1.1s
+
+Test set: Average loss: 0.02041953  |  Accuracy: 99.1426
+| Epoch  30 | last10 accuracy 12.5400 | last10 CE 2.08278966 | 1.1s
+
+Test set: Average loss: 0.02041878  |  Accuracy: 99.1426
+| Epoch  31 | last10 accuracy 12.5400 | last10 CE 2.08271384 | 1.1s
+
+Test set: Average loss: 0.02041697  |  Accuracy: 99.1426
+| Epoch  32 | last10 accuracy 12.5400 | last10 CE 2.08253050 | 1.1s
+
+Test set: Average loss: 0.02041789  |  Accuracy: 99.1426
+| Epoch  33 | last10 accuracy 12.5400 | last10 CE 2.08262420 | 1.1s
+
+Test set: Average loss: 0.02041821  |  Accuracy: 99.1426
+| Epoch  34 | last10 accuracy 12.5400 | last10 CE 2.08265686 | 1.1s
+
+Test set: Average loss: 0.02041688  |  Accuracy: 99.1426
+| Epoch  35 | last10 accuracy 12.5400 | last10 CE 2.08252120 | 1.1s
+
+Test set: Average loss: 0.02041682  |  Accuracy: 99.1426
+| Epoch  36 | last10 accuracy 12.5400 | last10 CE 2.08251476 | 1.1s
+
+Test set: Average loss: 0.02041754  |  Accuracy: 99.1426
+| Epoch  37 | last10 accuracy 12.5400 | last10 CE 2.08258843 | 1.1s
+
+Test set: Average loss: 0.02041778  |  Accuracy: 99.1426
+| Epoch  38 | last10 accuracy 12.5400 | last10 CE 2.08261299 | 1.1s
+
+Test set: Average loss: 0.02041754  |  Accuracy: 99.1426
+| Epoch  39 | last10 accuracy 12.5400 | last10 CE 2.08258820 | 1.1s
+
+Test set: Average loss: 0.02041690  |  Accuracy: 99.1426
+| Epoch  40 | last10 accuracy 12.5400 | last10 CE 2.08252335 | 1.1s
+
+Test set: Average loss: 0.02041658  |  Accuracy: 99.1426
+| Epoch  41 | last10 accuracy 12.5400 | last10 CE 2.08249092 | 1.1s
+
+Test set: Average loss: 0.02041677  |  Accuracy: 99.1426
+| Epoch  42 | last10 accuracy 12.5400 | last10 CE 2.08251047 | 1.1s
+
+Test set: Average loss: 0.02041731  |  Accuracy: 99.1426
+| Epoch  43 | last10 accuracy 12.5400 | last10 CE 2.08256578 | 1.1s
+
+Test set: Average loss: 0.02041690  |  Accuracy: 99.1426
+| Epoch  44 | last10 accuracy 12.5400 | last10 CE 2.08252430 | 1.1s
+
+Test set: Average loss: 0.02041755  |  Accuracy: 99.1426
+| Epoch  45 | last10 accuracy 12.5400 | last10 CE 2.08259034 | 1.1s
+
+Test set: Average loss: 0.02041785  |  Accuracy: 99.1426
+| Epoch  46 | last10 accuracy 12.5400 | last10 CE 2.08262038 | 1.1s
+
+Test set: Average loss: 0.02041775  |  Accuracy: 99.1426
+| Epoch  47 | last10 accuracy 12.5400 | last10 CE 2.08261085 | 1.1s
+
+Test set: Average loss: 0.02041045  |  Accuracy: 99.1426
+| Epoch  48 | last10 accuracy 12.5400 | last10 CE 2.08186531 | 1.1s
+
+Test set: Average loss: 0.02041770  |  Accuracy: 99.1426
+| Epoch  49 | last10 accuracy 12.5400 | last10 CE 2.08259988 | 1.1s
+
+Test set: Average loss: 0.02041769  |  Accuracy: 99.1426
+| Epoch  50 | last10 accuracy 12.5400 | last10 CE 2.08260441 | 1.1s
+FINAL_MODEL_PARAMETERS: 12400
+FINAL_OVERALL_ACCURACY: 99.1426%
+FINAL_LAST10_ACCURACY: 12.5400%
+FINAL_LAST10_CROSS_ENTROPY: 2.08260441
+TRAIN_SECONDS: 54.6

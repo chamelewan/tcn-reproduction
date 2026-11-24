@@ -1,0 +1,158 @@
+Namespace(batch_size=32, cuda=True, dropout=0.05, clip=1.0, epochs=50, ksize=8, iters=100, levels=8, blank_len=1000, seq_len=10, log_interval=1000, lr=0.0005, optim='RMSprop', nhid=10, seed=2222)
+Preparing data...
+/usr/local/lib/python3.13/dist-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+
+Test set: Average loss: 0.02392315  |  Accuracy: 99.1389
+
+
+Test set: Average loss: 0.01806691  |  Accuracy: 99.2929
+
+
+Test set: Average loss: 0.00954788  |  Accuracy: 99.6697
+
+
+Test set: Average loss: 0.00953337  |  Accuracy: 99.5379
+
+
+Test set: Average loss: 0.01152377  |  Accuracy: 99.3467
+
+
+Test set: Average loss: 0.00672778  |  Accuracy: 99.8203
+
+
+Test set: Average loss: 0.00629771  |  Accuracy: 99.8741
+
+
+Test set: Average loss: 0.00569956  |  Accuracy: 99.9183
+
+
+Test set: Average loss: 0.00784214  |  Accuracy: 99.5467
+
+
+Test set: Average loss: 0.00506761  |  Accuracy: 99.8782
+
+
+Test set: Average loss: 0.00454381  |  Accuracy: 99.9448
+
+
+Test set: Average loss: 0.00405998  |  Accuracy: 99.9534
+
+
+Test set: Average loss: 0.00858084  |  Accuracy: 99.4793
+
+
+Test set: Average loss: 0.00380238  |  Accuracy: 99.9484
+
+
+Test set: Average loss: 0.00358018  |  Accuracy: 99.9439
+
+
+Test set: Average loss: 0.00312201  |  Accuracy: 99.9587
+
+
+Test set: Average loss: 0.00249986  |  Accuracy: 99.9931
+
+
+Test set: Average loss: 0.00413802  |  Accuracy: 99.7645
+
+
+Test set: Average loss: 0.00401976  |  Accuracy: 99.8012
+
+
+Test set: Average loss: 0.00277962  |  Accuracy: 99.9376
+
+
+Test set: Average loss: 0.00184317  |  Accuracy: 99.9797
+
+
+Test set: Average loss: 0.00157626  |  Accuracy: 99.9990
+
+
+Test set: Average loss: 0.00379876  |  Accuracy: 99.7882
+
+
+Test set: Average loss: 0.00321619  |  Accuracy: 99.8177
+
+
+Test set: Average loss: 0.00107656  |  Accuracy: 99.9997
+
+
+Test set: Average loss: 0.00164757  |  Accuracy: 99.9805
+
+
+Test set: Average loss: 0.00099885  |  Accuracy: 99.9990
+
+
+Test set: Average loss: 0.00079944  |  Accuracy: 99.9998
+
+
+Test set: Average loss: 0.00078585  |  Accuracy: 99.9998
+
+
+Test set: Average loss: 0.00097012  |  Accuracy: 99.9977
+
+
+Test set: Average loss: 0.00066176  |  Accuracy: 99.9998
+
+
+Test set: Average loss: 0.00343432  |  Accuracy: 99.7980
+
+
+Test set: Average loss: 0.00061457  |  Accuracy: 99.9999
+
+
+Test set: Average loss: 0.00146298  |  Accuracy: 99.9683
+
+
+Test set: Average loss: 0.00041628  |  Accuracy: 99.9999
+
+
+Test set: Average loss: 0.00032817  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00029931  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00033459  |  Accuracy: 99.9997
+
+
+Test set: Average loss: 0.00030105  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00024222  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00027766  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00032816  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00021137  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00016652  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00015115  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00020583  |  Accuracy: 99.9999
+
+
+Test set: Average loss: 0.00012395  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00012576  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00016506  |  Accuracy: 100.0000
+
+
+Test set: Average loss: 0.00013439  |  Accuracy: 100.0000
+
+FINAL_MODEL_PARAMETERS: 12530
+FINAL_OVERALL_ACCURACY: 100.0000%
+FINAL_LAST10_ACCURACY: 100.0000%
+FINAL_LAST10_CROSS_ENTROPY: 0.01370351
