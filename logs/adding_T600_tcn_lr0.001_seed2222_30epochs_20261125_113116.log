@@ -1,0 +1,544 @@
+Namespace(batch_size=32, cuda=True, dropout=0.0, clip=-1, epochs=30, ksize=8, levels=8, seq_len=600, log_interval=100, lr=0.001, optim='Adam', nhid=24, seed=2222)
+Producing data...
+/usr/local/lib/python3.13/dist-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Train Epoch:  1 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.233720
+Train Epoch:  1 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.169261
+Train Epoch:  1 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.171071
+Train Epoch:  1 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.174948
+Train Epoch:  1 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.166304
+Train Epoch:  1 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.172099
+Train Epoch:  1 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.170929
+Train Epoch:  1 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.171094
+Train Epoch:  1 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.173729
+Train Epoch:  1 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.169855
+Train Epoch:  1 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.170948
+Train Epoch:  1 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.166658
+Train Epoch:  1 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.166326
+Train Epoch:  1 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.162717
+Train Epoch:  1 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.170634
+
+Test set: Average loss: 0.175390
+
+Train Epoch:  2 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.169666
+Train Epoch:  2 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.167787
+Train Epoch:  2 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.164161
+Train Epoch:  2 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.169718
+Train Epoch:  2 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.165259
+Train Epoch:  2 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.170916
+Train Epoch:  2 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.169041
+Train Epoch:  2 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.167837
+Train Epoch:  2 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.173662
+Train Epoch:  2 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.168390
+Train Epoch:  2 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.168324
+Train Epoch:  2 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.164789
+Train Epoch:  2 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.166450
+Train Epoch:  2 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.162261
+Train Epoch:  2 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.170017
+
+Test set: Average loss: 0.175007
+
+Train Epoch:  3 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.168895
+Train Epoch:  3 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.166348
+Train Epoch:  3 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.163558
+Train Epoch:  3 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.169088
+Train Epoch:  3 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.164745
+Train Epoch:  3 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.170285
+Train Epoch:  3 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.167930
+Train Epoch:  3 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.166933
+Train Epoch:  3 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.173585
+Train Epoch:  3 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.168043
+Train Epoch:  3 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.168031
+Train Epoch:  3 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.164225
+Train Epoch:  3 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.166171
+Train Epoch:  3 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.162059
+Train Epoch:  3 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.169366
+
+Test set: Average loss: 0.175008
+
+Train Epoch:  4 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.168865
+Train Epoch:  4 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.166002
+Train Epoch:  4 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.163282
+Train Epoch:  4 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.168663
+Train Epoch:  4 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.164377
+Train Epoch:  4 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.169844
+Train Epoch:  4 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.167215
+Train Epoch:  4 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.166527
+Train Epoch:  4 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.172436
+Train Epoch:  4 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.167809
+Train Epoch:  4 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.167581
+Train Epoch:  4 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.163782
+Train Epoch:  4 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.165669
+Train Epoch:  4 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.161389
+Train Epoch:  4 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.168370
+
+Test set: Average loss: 0.174347
+
+Train Epoch:  5 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.167430
+Train Epoch:  5 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.164044
+Train Epoch:  5 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.161237
+Train Epoch:  5 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.155878
+Train Epoch:  5 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.039535
+Train Epoch:  5 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.011986
+Train Epoch:  5 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.008133
+Train Epoch:  5 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.006946
+Train Epoch:  5 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.006775
+Train Epoch:  5 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.004644
+Train Epoch:  5 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.004679
+Train Epoch:  5 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.004838
+Train Epoch:  5 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.004229
+Train Epoch:  5 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.003091
+Train Epoch:  5 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.003258
+
+Test set: Average loss: 0.003864
+
+Train Epoch:  6 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.003369
+Train Epoch:  6 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.002534
+Train Epoch:  6 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.002808
+Train Epoch:  6 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.002261
+Train Epoch:  6 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.002700
+Train Epoch:  6 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.002271
+Train Epoch:  6 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.002390
+Train Epoch:  6 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.002397
+Train Epoch:  6 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.002143
+Train Epoch:  6 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.001764
+Train Epoch:  6 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.002272
+Train Epoch:  6 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.002343
+Train Epoch:  6 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.002112
+Train Epoch:  6 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.001719
+Train Epoch:  6 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.002162
+
+Test set: Average loss: 0.001668
+
+Train Epoch:  7 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.001827
+Train Epoch:  7 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.001448
+Train Epoch:  7 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.001592
+Train Epoch:  7 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.001237
+Train Epoch:  7 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.001654
+Train Epoch:  7 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.001297
+Train Epoch:  7 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.001467
+Train Epoch:  7 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.001623
+Train Epoch:  7 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.001562
+Train Epoch:  7 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.001059
+Train Epoch:  7 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.001469
+Train Epoch:  7 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.001489
+Train Epoch:  7 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.001485
+Train Epoch:  7 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.001244
+Train Epoch:  7 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.001645
+
+Test set: Average loss: 0.001505
+
+Train Epoch:  8 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.001295
+Train Epoch:  8 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000978
+Train Epoch:  8 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000931
+Train Epoch:  8 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000891
+Train Epoch:  8 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.001378
+Train Epoch:  8 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000961
+Train Epoch:  8 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.001104
+Train Epoch:  8 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.001300
+Train Epoch:  8 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.001305
+Train Epoch:  8 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000711
+Train Epoch:  8 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.001119
+Train Epoch:  8 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.001003
+Train Epoch:  8 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.001287
+Train Epoch:  8 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000947
+Train Epoch:  8 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.001126
+
+Test set: Average loss: 0.001061
+
+Train Epoch:  9 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.001133
+Train Epoch:  9 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000839
+Train Epoch:  9 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000718
+Train Epoch:  9 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000737
+Train Epoch:  9 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.001108
+Train Epoch:  9 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000731
+Train Epoch:  9 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000861
+Train Epoch:  9 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000896
+Train Epoch:  9 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.001034
+Train Epoch:  9 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000577
+Train Epoch:  9 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000832
+Train Epoch:  9 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000705
+Train Epoch:  9 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000768
+Train Epoch:  9 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000663
+Train Epoch:  9 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000754
+
+Test set: Average loss: 0.000664
+
+Train Epoch: 10 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.001143
+Train Epoch: 10 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000791
+Train Epoch: 10 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000611
+Train Epoch: 10 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000618
+Train Epoch: 10 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000671
+Train Epoch: 10 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000788
+Train Epoch: 10 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000664
+Train Epoch: 10 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000744
+Train Epoch: 10 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000719
+Train Epoch: 10 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000472
+Train Epoch: 10 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000741
+Train Epoch: 10 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000590
+Train Epoch: 10 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000554
+Train Epoch: 10 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000617
+Train Epoch: 10 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000669
+
+Test set: Average loss: 0.000568
+
+Train Epoch: 11 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000926
+Train Epoch: 11 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000546
+Train Epoch: 11 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000507
+Train Epoch: 11 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000548
+Train Epoch: 11 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000520
+Train Epoch: 11 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000648
+Train Epoch: 11 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000522
+Train Epoch: 11 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000651
+Train Epoch: 11 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000554
+Train Epoch: 11 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000429
+Train Epoch: 11 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000568
+Train Epoch: 11 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000530
+Train Epoch: 11 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000502
+Train Epoch: 11 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000541
+Train Epoch: 11 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000575
+
+Test set: Average loss: 0.000636
+
+Train Epoch: 12 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000760
+Train Epoch: 12 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000404
+Train Epoch: 12 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000395
+Train Epoch: 12 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000458
+Train Epoch: 12 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000443
+Train Epoch: 12 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000576
+Train Epoch: 12 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000439
+Train Epoch: 12 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000712
+Train Epoch: 12 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000461
+Train Epoch: 12 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000390
+Train Epoch: 12 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000511
+Train Epoch: 12 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000457
+Train Epoch: 12 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000415
+Train Epoch: 12 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000407
+Train Epoch: 12 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000491
+
+Test set: Average loss: 0.000636
+
+Train Epoch: 13 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000653
+Train Epoch: 13 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000366
+Train Epoch: 13 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000341
+Train Epoch: 13 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000414
+Train Epoch: 13 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000383
+Train Epoch: 13 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000545
+Train Epoch: 13 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000385
+Train Epoch: 13 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000651
+Train Epoch: 13 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000408
+Train Epoch: 13 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000331
+Train Epoch: 13 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000442
+Train Epoch: 13 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000430
+Train Epoch: 13 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000357
+Train Epoch: 13 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000380
+Train Epoch: 13 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000458
+
+Test set: Average loss: 0.000929
+
+Train Epoch: 14 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000576
+Train Epoch: 14 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000349
+Train Epoch: 14 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000310
+Train Epoch: 14 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000387
+Train Epoch: 14 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000348
+Train Epoch: 14 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000488
+Train Epoch: 14 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000348
+Train Epoch: 14 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000585
+Train Epoch: 14 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000359
+Train Epoch: 14 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000309
+Train Epoch: 14 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000413
+Train Epoch: 14 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000395
+Train Epoch: 14 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000325
+Train Epoch: 14 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000351
+Train Epoch: 14 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000408
+
+Test set: Average loss: 0.001069
+
+Train Epoch: 15 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000443
+Train Epoch: 15 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000412
+Train Epoch: 15 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000320
+Train Epoch: 15 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000374
+Train Epoch: 15 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000296
+Train Epoch: 15 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000424
+Train Epoch: 15 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000331
+Train Epoch: 15 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000499
+Train Epoch: 15 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000299
+Train Epoch: 15 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000316
+Train Epoch: 15 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000427
+Train Epoch: 15 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000316
+Train Epoch: 15 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000299
+Train Epoch: 15 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000301
+Train Epoch: 15 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000432
+
+Test set: Average loss: 0.000753
+
+Train Epoch: 16 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000355
+Train Epoch: 16 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000415
+Train Epoch: 16 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000278
+Train Epoch: 16 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000350
+Train Epoch: 16 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000302
+Train Epoch: 16 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000360
+Train Epoch: 16 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000344
+Train Epoch: 16 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000442
+Train Epoch: 16 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000257
+Train Epoch: 16 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000325
+Train Epoch: 16 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000416
+Train Epoch: 16 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000257
+Train Epoch: 16 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000288
+Train Epoch: 16 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000258
+Train Epoch: 16 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000391
+
+Test set: Average loss: 0.000919
+
+Train Epoch: 17 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000354
+Train Epoch: 17 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000405
+Train Epoch: 17 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000246
+Train Epoch: 17 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000336
+Train Epoch: 17 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000274
+Train Epoch: 17 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000318
+Train Epoch: 17 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000316
+Train Epoch: 17 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000354
+Train Epoch: 17 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000242
+Train Epoch: 17 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000280
+Train Epoch: 17 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000411
+Train Epoch: 17 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000237
+Train Epoch: 17 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000243
+Train Epoch: 17 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000226
+Train Epoch: 17 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000280
+
+Test set: Average loss: 0.000383
+
+Train Epoch: 18 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000303
+Train Epoch: 18 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000295
+Train Epoch: 18 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000248
+Train Epoch: 18 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000276
+Train Epoch: 18 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000407
+Train Epoch: 18 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000316
+Train Epoch: 18 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000259
+Train Epoch: 18 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000276
+Train Epoch: 18 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000246
+Train Epoch: 18 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000245
+Train Epoch: 18 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000371
+Train Epoch: 18 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000220
+Train Epoch: 18 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000223
+Train Epoch: 18 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000219
+Train Epoch: 18 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000219
+
+Test set: Average loss: 0.000231
+
+Train Epoch: 19 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000323
+Train Epoch: 19 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000288
+Train Epoch: 19 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000233
+Train Epoch: 19 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000230
+Train Epoch: 19 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000341
+Train Epoch: 19 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000257
+Train Epoch: 19 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000262
+Train Epoch: 19 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000236
+Train Epoch: 19 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000259
+Train Epoch: 19 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000237
+Train Epoch: 19 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000344
+Train Epoch: 19 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000171
+Train Epoch: 19 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000234
+Train Epoch: 19 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000281
+Train Epoch: 19 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000255
+
+Test set: Average loss: 0.000222
+
+Train Epoch: 20 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000254
+Train Epoch: 20 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000283
+Train Epoch: 20 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000226
+Train Epoch: 20 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000269
+Train Epoch: 20 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000255
+Train Epoch: 20 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000235
+Train Epoch: 20 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000224
+Train Epoch: 20 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000203
+Train Epoch: 20 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000210
+Train Epoch: 20 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000238
+Train Epoch: 20 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000309
+Train Epoch: 20 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000161
+Train Epoch: 20 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000213
+Train Epoch: 20 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000247
+Train Epoch: 20 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000215
+
+Test set: Average loss: 0.000164
+
+Train Epoch: 21 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000286
+Train Epoch: 21 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000254
+Train Epoch: 21 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000172
+Train Epoch: 21 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000184
+Train Epoch: 21 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000223
+Train Epoch: 21 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000234
+Train Epoch: 21 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000216
+Train Epoch: 21 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000226
+Train Epoch: 21 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000238
+Train Epoch: 21 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000248
+Train Epoch: 21 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000278
+Train Epoch: 21 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000151
+Train Epoch: 21 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000177
+Train Epoch: 21 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000260
+Train Epoch: 21 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000258
+
+Test set: Average loss: 0.000137
+
+Train Epoch: 22 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000253
+Train Epoch: 22 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000240
+Train Epoch: 22 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000172
+Train Epoch: 22 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000181
+Train Epoch: 22 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000184
+Train Epoch: 22 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000186
+Train Epoch: 22 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000189
+Train Epoch: 22 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000194
+Train Epoch: 22 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000260
+Train Epoch: 22 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000247
+Train Epoch: 22 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000234
+Train Epoch: 22 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000135
+Train Epoch: 22 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000173
+Train Epoch: 22 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000256
+Train Epoch: 22 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000249
+
+Test set: Average loss: 0.000127
+
+Train Epoch: 23 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000243
+Train Epoch: 23 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000209
+Train Epoch: 23 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000153
+Train Epoch: 23 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000174
+Train Epoch: 23 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000161
+Train Epoch: 23 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000185
+Train Epoch: 23 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000153
+Train Epoch: 23 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000268
+Train Epoch: 23 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000263
+Train Epoch: 23 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000244
+Train Epoch: 23 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000213
+Train Epoch: 23 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000136
+Train Epoch: 23 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000144
+Train Epoch: 23 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000235
+Train Epoch: 23 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000234
+
+Test set: Average loss: 0.000121
+
+Train Epoch: 24 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000237
+Train Epoch: 24 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000208
+Train Epoch: 24 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000148
+Train Epoch: 24 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000134
+Train Epoch: 24 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000145
+Train Epoch: 24 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000179
+Train Epoch: 24 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000154
+Train Epoch: 24 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000265
+Train Epoch: 24 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000265
+Train Epoch: 24 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000217
+Train Epoch: 24 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000203
+Train Epoch: 24 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000133
+Train Epoch: 24 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000131
+Train Epoch: 24 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000219
+Train Epoch: 24 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000211
+
+Test set: Average loss: 0.000105
+
+Train Epoch: 25 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000240
+Train Epoch: 25 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000200
+Train Epoch: 25 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000172
+Train Epoch: 25 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000136
+Train Epoch: 25 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000130
+Train Epoch: 25 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000165
+Train Epoch: 25 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000159
+Train Epoch: 25 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000230
+Train Epoch: 25 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000229
+Train Epoch: 25 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000220
+Train Epoch: 25 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000184
+Train Epoch: 25 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000127
+Train Epoch: 25 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000121
+Train Epoch: 25 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000180
+Train Epoch: 25 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000199
+
+Test set: Average loss: 0.000140
+
+Train Epoch: 26 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000262
+Train Epoch: 26 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000211
+Train Epoch: 26 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000167
+Train Epoch: 26 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000125
+Train Epoch: 26 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000133
+Train Epoch: 26 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000164
+Train Epoch: 26 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000159
+Train Epoch: 26 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000166
+Train Epoch: 26 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000238
+Train Epoch: 26 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000194
+Train Epoch: 26 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000151
+Train Epoch: 26 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000120
+Train Epoch: 26 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000126
+Train Epoch: 26 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000149
+Train Epoch: 26 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000144
+
+Test set: Average loss: 0.000138
+
+Train Epoch: 27 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000325
+Train Epoch: 27 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000205
+Train Epoch: 27 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000136
+Train Epoch: 27 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000125
+Train Epoch: 27 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000142
+Train Epoch: 27 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000147
+Train Epoch: 27 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000147
+Train Epoch: 27 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000183
+Train Epoch: 27 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000222
+Train Epoch: 27 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000199
+Train Epoch: 27 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000156
+Train Epoch: 27 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000102
+Train Epoch: 27 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000109
+Train Epoch: 27 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000149
+Train Epoch: 27 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000153
+
+Test set: Average loss: 0.000107
+
+Train Epoch: 28 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000302
+Train Epoch: 28 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000195
+Train Epoch: 28 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000142
+Train Epoch: 28 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000115
+Train Epoch: 28 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000100
+Train Epoch: 28 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000122
+Train Epoch: 28 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000182
+Train Epoch: 28 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000157
+Train Epoch: 28 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000206
+Train Epoch: 28 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000172
+Train Epoch: 28 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000143
+Train Epoch: 28 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000080
+Train Epoch: 28 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000092
+Train Epoch: 28 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000122
+Train Epoch: 28 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000154
+
+Test set: Average loss: 0.000085
+
+Train Epoch: 29 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000288
+Train Epoch: 29 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000194
+Train Epoch: 29 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000122
+Train Epoch: 29 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000112
+Train Epoch: 29 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000167
+Train Epoch: 29 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000124
+Train Epoch: 29 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000119
+Train Epoch: 29 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000175
+Train Epoch: 29 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000176
+Train Epoch: 29 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000189
+Train Epoch: 29 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000145
+Train Epoch: 29 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000097
+Train Epoch: 29 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000090
+Train Epoch: 29 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000119
+Train Epoch: 29 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000109
+
+Test set: Average loss: 0.000067
+
+Train Epoch: 30 [  3168/ 50000 (6%)]	Learning rate: 0.0010	Loss: 0.000308
+Train Epoch: 30 [  6368/ 50000 (13%)]	Learning rate: 0.0010	Loss: 0.000191
+Train Epoch: 30 [  9568/ 50000 (19%)]	Learning rate: 0.0010	Loss: 0.000119
+Train Epoch: 30 [ 12768/ 50000 (26%)]	Learning rate: 0.0010	Loss: 0.000127
+Train Epoch: 30 [ 15968/ 50000 (32%)]	Learning rate: 0.0010	Loss: 0.000104
+Train Epoch: 30 [ 19168/ 50000 (38%)]	Learning rate: 0.0010	Loss: 0.000100
+Train Epoch: 30 [ 22368/ 50000 (45%)]	Learning rate: 0.0010	Loss: 0.000114
+Train Epoch: 30 [ 25568/ 50000 (51%)]	Learning rate: 0.0010	Loss: 0.000161
+Train Epoch: 30 [ 28768/ 50000 (58%)]	Learning rate: 0.0010	Loss: 0.000230
+Train Epoch: 30 [ 31968/ 50000 (64%)]	Learning rate: 0.0010	Loss: 0.000148
+Train Epoch: 30 [ 35168/ 50000 (70%)]	Learning rate: 0.0010	Loss: 0.000140
+Train Epoch: 30 [ 38368/ 50000 (77%)]	Learning rate: 0.0010	Loss: 0.000069
+Train Epoch: 30 [ 41568/ 50000 (83%)]	Learning rate: 0.0010	Loss: 0.000081
+Train Epoch: 30 [ 44768/ 50000 (90%)]	Learning rate: 0.0010	Loss: 0.000117
+Train Epoch: 30 [ 47968/ 50000 (96%)]	Learning rate: 0.0010	Loss: 0.000129
+
+Test set: Average loss: 0.000065
+
