@@ -1,0 +1,34 @@
+model=GRU seed=1111 params=69451 device=cuda
+constant_one_test_mse=0.181991279
+epoch=1 test_mse=0.000365376
+epoch=2 test_mse=0.000203267
+epoch=3 test_mse=0.000114776
+epoch=4 test_mse=0.000017126
+epoch=5 test_mse=0.000018908
+epoch=6 test_mse=0.000022794
+epoch=7 test_mse=0.000016220
+epoch=8 test_mse=0.000015628
+epoch=9 test_mse=0.000023678
+epoch=10 test_mse=0.000027066
+epoch=11 test_mse=0.000016606
+epoch=12 test_mse=0.000009863
+epoch=13 test_mse=0.000019533
+epoch=14 test_mse=0.000006429
+epoch=15 test_mse=0.000005743
+epoch=16 test_mse=0.000002935
+epoch=17 test_mse=0.000008881
+epoch=18 test_mse=0.000010528
+epoch=19 test_mse=0.000011887
+epoch=20 test_mse=0.000003245
+epoch=21 test_mse=0.000004206
+epoch=22 test_mse=0.000009783
+epoch=23 test_mse=0.000003449
+epoch=24 test_mse=0.000003303
+epoch=25 test_mse=0.000086849
+epoch=26 test_mse=0.000005811
+epoch=27 test_mse=0.000007229
+epoch=28 test_mse=0.000005797
+epoch=29 test_mse=0.000001669
+epoch=30 test_mse=0.000001162
+results=/content/gru30_logs/adding_gru_T600_seed1111_30epochs_results.json
+checkpoint=/content/gru30_logs/adding_gru_T600_seed1111_30epochs_checkpoint.pt

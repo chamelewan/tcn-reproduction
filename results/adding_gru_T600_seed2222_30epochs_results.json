@@ -1,0 +1,137 @@
+{
+  "task": "Adding Problem",
+  "model": "single-layer PyTorch GRU with linear output",
+  "upstream_commit": "2f8c2b817050206397458dfd1f5a25ce8a32fe65",
+  "sequence_length": 600,
+  "seed": 2222,
+  "hidden_size": 150,
+  "parameter_count": 69451,
+  "train_samples": 50000,
+  "test_samples": 1000,
+  "batch_size": 32,
+  "optimizer": "Adam",
+  "learning_rate": 0.004,
+  "constant_one_test_mse": 0.17513471841812134,
+  "test_mse_by_epoch": [
+    {
+      "epoch": 1,
+      "test_mse": 0.000365693646017462
+    },
+    {
+      "epoch": 2,
+      "test_mse": 0.00010589641897240654
+    },
+    {
+      "epoch": 3,
+      "test_mse": 0.00015040421567391604
+    },
+    {
+      "epoch": 4,
+      "test_mse": 8.158341370290145e-05
+    },
+    {
+      "epoch": 5,
+      "test_mse": 4.810171594726853e-05
+    },
+    {
+      "epoch": 6,
+      "test_mse": 3.648674828582443e-05
+    },
+    {
+      "epoch": 7,
+      "test_mse": 5.537045581149869e-05
+    },
+    {
+      "epoch": 8,
+      "test_mse": 2.4343466066056862e-05
+    },
+    {
+      "epoch": 9,
+      "test_mse": 2.0528017557808198e-05
+    },
+    {
+      "epoch": 10,
+      "test_mse": 2.572239827713929e-05
+    },
+    {
+      "epoch": 11,
+      "test_mse": 8.367970622202847e-06
+    },
+    {
+      "epoch": 12,
+      "test_mse": 1.59847222676035e-05
+    },
+    {
+      "epoch": 13,
+      "test_mse": 1.5142611118790228e-05
+    },
+    {
+      "epoch": 14,
+      "test_mse": 1.4434251170314383e-05
+    },
+    {
+      "epoch": 15,
+      "test_mse": 1.7589223716640845e-05
+    },
+    {
+      "epoch": 16,
+      "test_mse": 1.5962203178787604e-05
+    },
+    {
+      "epoch": 17,
+      "test_mse": 4.816848104383098e-06
+    },
+    {
+      "epoch": 18,
+      "test_mse": 7.526073659391841e-06
+    },
+    {
+      "epoch": 19,
+      "test_mse": 8.996895303425845e-06
+    },
+    {
+      "epoch": 20,
+      "test_mse": 8.395467375521548e-06
+    },
+    {
+      "epoch": 21,
+      "test_mse": 1.0949057468678802e-05
+    },
+    {
+      "epoch": 22,
+      "test_mse": 2.7602841328189243e-06
+    },
+    {
+      "epoch": 23,
+      "test_mse": 7.665576958970632e-06
+    },
+    {
+      "epoch": 24,
+      "test_mse": 4.868826181336772e-06
+    },
+    {
+      "epoch": 25,
+      "test_mse": 2.6823470761883073e-05
+    },
+    {
+      "epoch": 26,
+      "test_mse": 6.48212289888761e-06
+    },
+    {
+      "epoch": 27,
+      "test_mse": 6.996011961746262e-06
+    },
+    {
+      "epoch": 28,
+      "test_mse": 5.2098839660175145e-06
+    },
+    {
+      "epoch": 29,
+      "test_mse": 1.6965446775429882e-05
+    },
+    {
+      "epoch": 30,
+      "test_mse": 6.916298843862023e-06
+    }
+  ]
+}
